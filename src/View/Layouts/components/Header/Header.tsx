@@ -27,6 +27,7 @@ const Header = () => {
           {width <= 768 ? (
             <button className="text-fuscous-gray-50 p-4">
               <HamburgerMenuIcon
+                aria-label="BtnOpenModal"
                 onClick={handleOpenModalMenu}
                 className="h-6 w-6"
               />

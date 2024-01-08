@@ -22,8 +22,17 @@ export default {
           overlayShow:  "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
           slideDownAndFade:  "slideDownAndFade  400ms cubic-bezier(0.16, 1, 0.3, 1)",   
           contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+          "animate-skeleton": "1.5s infinite linear",
         },
         keyframes: {
+          skeleton: {
+            from: {
+              backgroundPosition: "0px",
+            },
+            to: {
+              backgroundPosition: "-200%",
+            },
+          },
           overlayShow: {
             from: {
               opacity:0,
