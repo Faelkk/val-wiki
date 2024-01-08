@@ -9,6 +9,7 @@ import Layout from "../View/Layouts/Layout";
 import PlayerCards from "../View/pages/PlayerCards/PlayerCards";
 import Sprays from "../View/pages/Sprays/Sprays";
 import Buddies from "../View/pages/Buddies/Buddies";
+import AgentsById from "../View/pages/AgentsById/AgentsById";
 
 const Router = () => {
   return (
@@ -17,7 +18,7 @@ const Router = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/agents" element={<Agents />} />
-          {/* <Route path="/agents/:id" element={} /> */}
+          <Route path="/agents/:id" element={<AgentsById />} />
           <Route path="/weapons" element={<Weapons />} />
           <Route path="/maps" element={<Maps />} />
           <Route path="/cards" element={<PlayerCards />} />

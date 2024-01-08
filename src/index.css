@@ -2,3 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Estilização da barra de rolagem personalizada */
+.custom-scrollbarHeader::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .custom-scrollbarHeader::-webkit-scrollbar-thumb {
+    background-color: #6e6c6c;
+    border-radius: 6px;
+  }
+  
+  .custom-scrollbarHeader::-webkit-scrollbar-track {
+    border-radius: 6px;
+  }
+  
+  .custom-scrollbarHeader::-webkit-scrollbar-corner {
+  }
+  

@@ -2,6 +2,11 @@ export interface AgentsFetch {
     status: number
     data: Agents[]
   }
+
+  export interface AgentFetch {
+    status: number
+    data: Agents
+  }
   
   export interface Agents {
     uuid: string

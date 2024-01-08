@@ -8,7 +8,7 @@ interface CardProps {
 
 const Card = ({ agente }: CardProps) => {
   return (
-    <Link to={`/${agente.uuid}`} className="relative">
+    <Link to={`/agents/${agente.uuid}`} className="relative">
       <div className="h-64 border-[1px] border-blueVariation2-500  overflow-hidden relative bg-agent before:content-[''] before:block before:w-full before:h-full before:absolute before:top-0 before:border-[2rem] before:border-[#0F141A] before:box-border">
         <ImageSkeleton
           className="w-[80%] object-cover object-top-top h-[28rem] absolute my-4 mx-12 opacity-0"
