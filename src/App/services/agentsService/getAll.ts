@@ -1,7 +1,8 @@
+import { AgentsFetch } from "../../entities/Agents";
 import { httpClient } from "../httpClient";
 
 export async function getAll() {
-    const {data} = await httpClient.get("/buddies")
-
+    const {data} = await httpClient.get<AgentsFetch | null>("/agents?isPlayableCharacter=true")
+    
     return data
 }

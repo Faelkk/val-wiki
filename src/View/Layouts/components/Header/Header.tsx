@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="bg-cyanVariation-950 p-6 w-full flex justify-center h-[72px]">
+      <header className="bg-[#14191f] p-6 w-full flex justify-center h-[72px] border-b border-blueVariation2-950 ">
         <section className="flex items-center justify-between w-[80%]">
           <div className="">
             <TitleHeader

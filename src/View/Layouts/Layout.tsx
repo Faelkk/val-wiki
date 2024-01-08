@@ -7,7 +7,7 @@ const Layout = () => {
   return (
     <div className="flex flex-col h-screen">
       <Header />
-      <main className="flex-1 h-[calc(100vh_-_72px)] ">
+      <main className="flex-1  bg-blueVariation-950 ">
         <Outlet />
       </main>
       <Footer />
@@ -16,3 +16,5 @@ const Layout = () => {
 };
 
 export default Layout;
+
+// h-[calc(100vh_-_72px)]

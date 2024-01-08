@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { buddiesService } from "../services/BuddiesService";
 
-export function useAgents() {
+export function useBuddies() {
     const {data,isFetching} = useQuery({
         queryKey: ['Buddies'],
         queryFn: buddiesService.getAll,

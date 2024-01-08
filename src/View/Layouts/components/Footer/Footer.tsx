@@ -2,7 +2,7 @@ import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 const Footer = () => {
   return (
-    <footer className="bg-cyanVariation-950 flex justify-center w-full p-6 h-[72px]">
+    <footer className="bg-[#14191f] flex justify-center w-full p-6 h-[72px] border-t border-blueVariation2-950">
       <div className="flex items-center justify-between w-[80%]">
         <span className="text-fuscous-gray-50">
           {" "}

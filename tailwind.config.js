@@ -5,46 +5,54 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-  screens: {
-    small: '400px'
-  },
-
-    animation: {
-      overlayShow:  "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-      slideDownAndFade:  "slideDownAndFade  400ms cubic-bezier(0.16, 1, 0.3, 1)",   
-      contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
-    },
-    keyframes: {
-      overlayShow: {
-        from: {
-          opacity:0,
-        },
-        to: {
-          opacity: 1,
-        },
-      },
-      slideDownAndFade: {
-        from: {
-          opacity:0,
-          transform: "translateY(-2px)",
-        },
-        to: {
-          opacity: 1,
-          transform: "translateY(0px)"
-        },
-      },
-      contentShow: {
-        from: {
-            opacity: 0,
-            transform: "translate(-50%, -48%) scale(0.96)",
-        },
-        to: {
-            opacity: 1,
-            transform: "translate(-50%, -50%) scale(1)",
-        },
-    },
-    },
     extend: {
+      backgroundImage: {
+        agent: "url('https://trackercdn.com/cdn/tracker.gg/valorant/images/agents-bg.png')",
+      },
+      screens: {
+        small: '400px',
+        pp:'630px',
+        md:' 768px',
+        
+        lg:'1024px',
+        xl: '1280px'
+      },
+    
+        animation: {
+          overlayShow:  "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+          slideDownAndFade:  "slideDownAndFade  400ms cubic-bezier(0.16, 1, 0.3, 1)",   
+          contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        },
+        keyframes: {
+          overlayShow: {
+            from: {
+              opacity:0,
+            },
+            to: {
+              opacity: 1,
+            },
+          },
+          slideDownAndFade: {
+            from: {
+              opacity:0,
+              transform: "translateY(-2px)",
+            },
+            to: {
+              opacity: 1,
+              transform: "translateY(0px)"
+            },
+          },
+          contentShow: {
+            from: {
+                opacity: 0,
+                transform: "translate(-50%, -48%) scale(0.96)",
+            },
+            to: {
+                opacity: 1,
+                transform: "translate(-50%, -50%) scale(1)",
+            },
+        },
+        },
       colors: {
         blueVariation: {
           50: '#f5f7fa',
@@ -86,6 +94,7 @@ export default {
           800: '#495e84',
           900: '#3e4e6a',
           950: '#293242',
+          980: '#2c3f52', 
       },
       redVariation2: {
         '50': '#fdf3f3',
@@ -113,6 +122,7 @@ export default {
         '800': '#454545',
         '900': '#3d3c3c',
         '950': '#262626',
+        '980':  '#141414'
     },
       
       }
