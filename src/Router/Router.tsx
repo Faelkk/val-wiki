@@ -22,7 +22,7 @@ const Router = () => {
           <Route path="/maps" element={<Maps />} />
           <Route path="/cards" element={<PlayerCards />} />
           <Route path="/sprays" element={<Sprays />} />
-          <Route path="/Buddies" element={<Buddies />} />
+          <Route path="/buddies" element={<Buddies />} />
           <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
