@@ -30,6 +30,7 @@ export interface AgentsFetch {
     role?: Role
     recruitmentData?: RecruitmentData
     abilities: Ability[]
+    voiceLine: VoiceLine
    
   }
   
@@ -58,3 +59,12 @@ export interface AgentsFetch {
     displayIcon?: string
   }
   
+  
+export interface VoiceLine {
+  mediaList: MediaList[]
+}
+
+export interface MediaList {
+  id: number
+  wave: string
+}
