@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Agents } from "../../../../App/entities/Agents";
-import ImageSkeleton from "../../../Components/Modal/Skeleton";
+import ImageSkeleton from "../../../Components/Skeleton";
 
 interface CardProps {
   agente: Agents;

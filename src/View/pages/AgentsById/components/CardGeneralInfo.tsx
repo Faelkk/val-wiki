@@ -4,18 +4,11 @@ interface CardGeneralInfoProps {
 }
 
 const CardGeneralInfo = ({ agentesById }: CardGeneralInfoProps) => {
+  if (!agentesById) return null;
   return (
     <>
       <section className="flex flex-col  lg:w-[50%]">
         <figure className="flex justify-center items-center bg-blueVariation2-950 rounded-sm relative">
-          <img
-            src={agentesById.background}
-            className="hidden w-[200px] h-[200px] object-cover left-0 "
-          />
-          <img
-            src={agentesById.background}
-            className="hidden w-[200px] h-[200px] object-cover left-0 "
-          />
           <img
             src={agentesById.fullPortraitV2}
             alt={agentesById.displayName}

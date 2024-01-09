@@ -6,6 +6,8 @@ interface CardAbilitiesProps {
 }
 
 const CardAbilities = ({ agentesById }: CardAbilitiesProps) => {
+  if (!agentesById) return null;
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [abilityActive, setAbilityActive] = useState(agentesById.abilities[0]);
 
   return (
