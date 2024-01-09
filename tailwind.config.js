@@ -10,13 +10,13 @@ export default {
         agent: "url('https://trackercdn.com/cdn/tracker.gg/valorant/images/agents-bg.png')",
       },
       screens: {
+        lowScreen: '300px',
         small: '400px',
         pp:'630px',
         md:' 768px',
         
         lg:'1024px',
         xl: '1280px',
-        mediumLarge: '1430px',
      
       },
     

@@ -9,8 +9,8 @@ const CardAbilities = ({ agentesById }: CardAbilitiesProps) => {
   const [abilityActive, setAbilityActive] = useState(agentesById.abilities[0]);
 
   return (
-    <section className="pb-3 rounded-sm bg-[#14191f] lg:w-[50%]">
-      <div className="mt-5">
+    <section className="flex flex-col  rounded-sm  lg:w-[50%]">
+      <div className="">
         <video
           autoPlay
           loop
@@ -24,11 +24,11 @@ const CardAbilities = ({ agentesById }: CardAbilitiesProps) => {
         </video>
       </div>
 
-      <div className="mt-4 p-5 flex flex-col gap-4">
+      <div className="mt-4 flex-1 bg-[#14191f] p-2 small:p-6 flex flex-col gap-4 ">
         <span className="text-fuscous-gray-300 font-bold uppercase ">
           Habilidades
         </span>
-        <div className="flex  gap-6">
+        <div className="flex gap-2 md:gap-6">
           {agentesById.abilities.map((abilities) => {
             if (abilities.displayIcon !== null)
               return (
@@ -40,17 +40,17 @@ const CardAbilities = ({ agentesById }: CardAbilitiesProps) => {
                   <img
                     src={abilities.displayIcon}
                     alt={abilities.displayName}
-                    className="w-12 h-12"
+                    className="small:w-12 small:h-12"
                   />
                 </button>
               );
           })}
         </div>
-        <div className="flex flex-col">
-          <span className="text-fuscous-gray-50 text-[1.2rem] uppercase tracking-[.07rem] font-bold">
+        <div className="flex flex-col ">
+          <span className="text-fuscous-gray-50 text-[1.3rem] uppercase tracking-[.07rem] font-bold mb-2">
             {abilityActive?.displayName}
           </span>
-          <span className="text-fuscous-gray-50">
+          <span className="text-fuscous-gray-50 text-[.9rem] ">
             {abilityActive?.description}
           </span>
         </div>

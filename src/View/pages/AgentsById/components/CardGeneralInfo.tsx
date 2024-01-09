@@ -22,7 +22,7 @@ const CardGeneralInfo = ({ agentesById }: CardGeneralInfoProps) => {
             className="h-[400px] w-[300px] object-cover"
           />
         </figure>
-        <section className="mt-4 bg-[#14191f] flex-1 p-3 relative ">
+        <section className="mt-4 bg-[#14191f] p-2  small:p-6 flex-1  relative ">
           <h2 className="text-fuscous-gray-50 text-2xl uppercase tracking-[.07rem] font-bold mt-2 mb-4">
             {agentesById.displayName}
           </h2>

@@ -23,7 +23,7 @@ const HeaderAgents = ({ agentsById }: HeaderAgentsProps) => {
             </Link>
           </div>
           <div className="overflow-x-auto md:ml-6 custom-scrollbarHeader p-3 bg-fuscous-gray-980 rounded-sm mt-10 md:mt-0">
-            <ul className="flex gap-4 whitespace-nowrap  ">
+            <ul className="flex gap-[.5rem] small:gap-4 whitespace-nowrap  ">
               {agentsTyped?.data.map((agente) => {
                 return (
                   <li
