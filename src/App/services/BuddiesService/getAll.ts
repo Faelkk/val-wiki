@@ -1,7 +1,7 @@
 import { httpClient } from "../httpClient";
 
 export async function getAll() {
-    const {data} = await httpClient.get("/buddies")
+    const {data} = await httpClient.get("/buddies?language=pt-BR")
 
-    return data
+    return data.data
 }
