@@ -1,30 +1,29 @@
-import { useState } from "react";
-import { Agents } from "../../../../App/entities/Agents";
+import { Agents } from "../../../../../App/entities/Agents";
+import { useCardAbilities } from "./useCardAbilities";
 
 interface CardAbilitiesProps {
   agentsById: Agents;
 }
 
 const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {
-  const [abilityActive, setAbilityActive] = useState(
-    agentsById?.abilities?.[0] || null
-  );
+  const { abilityActive, urlAbilityVideo, handleClick } =
+    useCardAbilities(agentsById);
 
-  if (agentsById && agentsById.abilities)
+  if (agentsById && agentsById.abilities) {
     return (
       <section className="flex flex-col  rounded-sm  lg:w-[50%]">
-        <div className="">
+        <div className="w-full">
           <video
             autoPlay
-            loop
             muted
+            loop
             playsInline
             disablePictureInPicture
             controlsList="nodownload"
-            className="w-full object-cover h-[400px] "
-          >
-            <source src="https://blitz-cdn-videos.blitz.gg/valorant/agents/astra/abilities/Astra_C.mp4#t=0.1" />
-          </video>
+            className="w-full object-cover h-[400px]"
+            src={urlAbilityVideo}
+            onError={(e) => console.error("Video error:", e)}
+          />
         </div>
 
         <div className="mt-4 flex-1 bg-[#14191f] p-2 small:p-6 flex flex-col gap-4 ">
@@ -32,12 +31,12 @@ const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {
             Habilidades
           </span>
           <div className="flex gap-2 md:gap-6">
-            {agentsById.abilities.map((abilities) => {
+            {agentsById.abilities.map((abilities, index) => {
               if (abilities.displayIcon !== null)
                 return (
                   <button
                     className="border-[1px]  p-2 rounded-sm"
-                    onClick={() => setAbilityActive(abilities)}
+                    onClick={() => handleClick(abilities, index)}
                     key={abilities.displayName}
                   >
                     <img
@@ -60,6 +59,7 @@ const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {
         </div>
       </section>
     );
+  }
 };
 
 export default CardAbilities;
