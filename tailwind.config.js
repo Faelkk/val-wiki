@@ -9,6 +9,7 @@ export default {
       backgroundImage: {
         agent: "url('https://trackercdn.com/cdn/tracker.gg/valorant/images/agents-bg.png')",
       },
+      
       screens: {
         lowScreen: '300px',
         small: '400px',
@@ -139,6 +140,7 @@ export default {
       }
     },
   },
-  plugins: [],
+ 
+ 
 }
 

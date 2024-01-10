@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilização da barra de rolagem personalizada */
+
+
 .custom-scrollbarHeader::-webkit-scrollbar {
     height: 6px;
   }
@@ -17,5 +18,20 @@
   }
   
   .custom-scrollbarHeader::-webkit-scrollbar-corner {
+  }
+  
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
