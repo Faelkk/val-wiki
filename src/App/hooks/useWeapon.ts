@@ -8,5 +8,5 @@ export function useWeapons() {
          staleTime: Infinity,
     })
 
-    return {Buddies: data ?? [], isLoading: isFetching}
+    return {Weapons: data ?? [], isLoading: isFetching}
 }

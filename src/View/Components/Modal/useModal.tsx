@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useModalMenu = () => {
+export function useModalMenu() {
   const [isModalMenuOpen, setIsModalMenu] = useState(false);
 
   function handleCloseModalMenu() {
@@ -15,6 +15,4 @@ const useModalMenu = () => {
     handleCloseModalMenu,
     handleOpenModalMenu,
   };
-};
-
-export default useModalMenu;
+}

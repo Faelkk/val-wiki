@@ -29,7 +29,7 @@ const AgentsById = () => {
         {agentsByIdTyped && (
           <section className="my-4">
             <HeaderAgents agentsById={agentsByIdTyped} agents={agents} />
-            {<CardAgentById agentsById={agentsByIdTyped} />}
+            <CardAgentById agentsById={agentsByIdTyped} />
           </section>
         )}
       </>

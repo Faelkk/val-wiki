@@ -22,7 +22,6 @@ const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {
             controlsList="nodownload"
             className="w-full object-cover h-[400px]"
             src={urlAbilityVideo}
-            onError={(e) => console.error("Video error:", e)}
           />
         </div>
 

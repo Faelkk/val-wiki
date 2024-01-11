@@ -32,7 +32,7 @@ const ModalHeader = ({
           </li>
           <li className="text-fuscous-gray-950 text-[1.2rem] transition-colors list-none">
             <Link to="/weapons" onClick={handleCloseModalMenu}>
-              Armas
+              Arsenal
             </Link>
           </li>
 

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import useWindowWidth from "../../../../App/hooks/useWindowWidth";
 
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import useModalMenu from "../../../Components/Modal/useModal";
 import TitleHeader from "./components/TitleHeader";
 import ModalHeader from "./components/ModalHeader";
+import { useModalMenu } from "../../../Components/Modal/useModal";
 
 const Header = () => {
   const width = useWindowWidth();
@@ -39,7 +39,7 @@ const Header = () => {
                   <Link to="/agents">Agentes</Link>
                 </li>
                 <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
-                  <Link to="/weapons">Armas</Link>
+                  <Link to="/weapons">Arsenal</Link>
                 </li>
 
                 <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
