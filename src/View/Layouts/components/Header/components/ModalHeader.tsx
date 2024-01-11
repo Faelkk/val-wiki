@@ -13,6 +13,7 @@ const ModalHeader = ({
 }: ModalHeaderProps) => {
   return (
     <Modal
+      classNameContent="w-full max-w-[300px]  sm:max-w-[400px]"
       open={isModalMenuOpen}
       onClose={handleCloseModalMenu}
       title={

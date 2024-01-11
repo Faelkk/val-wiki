@@ -13,5 +13,5 @@ export interface Weapon {
 export interface shopData{
     category: string
     categoryText: string
-    
+    cost: number
 }
