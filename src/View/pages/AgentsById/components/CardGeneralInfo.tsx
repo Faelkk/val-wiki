@@ -1,6 +1,6 @@
-import { Agents } from "../../../../App/entities/Agents";
+import { Agent } from "../../../../App/entities/Agents";
 interface CardGeneralInfoProps {
-  agentsById: Agents;
+  agentsById: Agent;
 }
 
 const CardGeneralInfo = ({ agentsById }: CardGeneralInfoProps) => {

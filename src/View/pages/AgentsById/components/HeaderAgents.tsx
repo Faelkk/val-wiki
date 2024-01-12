@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import { cn } from "../../../../App/utils/cn";
-import { Agents } from "../../../../App/entities/Agents";
+import { Agent } from "../../../../App/entities/Agents";
 
 interface HeaderAgentsProps {
-  agentsById: Agents;
-  agents: Agents[];
+  agentsById: Agent;
+  agents: Agent[];
 }
 
 const HeaderAgents = ({ agentsById, agents }: HeaderAgentsProps) => {

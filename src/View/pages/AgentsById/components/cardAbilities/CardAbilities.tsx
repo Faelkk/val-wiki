@@ -1,8 +1,8 @@
-import { Agents } from "../../../../../App/entities/Agents";
+import { Agent } from "../../../../../App/entities/Agents";
 import { useCardAbilities } from "./useCardAbilities";
 
 interface CardAbilitiesProps {
-  agentsById: Agents;
+  agentsById: Agent;
 }
 
 const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {

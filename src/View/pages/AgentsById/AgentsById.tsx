@@ -3,13 +3,13 @@ import { useAgentsByIdController } from "./useAgentsController";
 import HeaderAgents from "./components/HeaderAgents";
 import CardAgentById from "./components/CardAgentById";
 import Spinner from "../../Components/Spinner";
-import { Agents } from "../../../App/entities/Agents";
+import { Agent } from "../../../App/entities/Agents";
 import { useAgents } from "../../../App/hooks/useAgents";
 
 const AgentsById = () => {
   const { agentsById, isLoading, error } = useAgentsByIdController();
   const { agents } = useAgents();
-  const agentsByIdTyped = agentsById as Agents;
+  const agentsByIdTyped = agentsById as Agent;
 
   if (isLoading)
     return (

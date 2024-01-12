@@ -1,14 +1,14 @@
 export interface AgentsFetch {
     status: number
-    data: Agents[]
+    data: Agent[]
   }
 
   export interface AgentFetch {
     status: number
-    data: Agents
+    data: Agent
   }
   
-  export interface Agents {
+  export interface Agent {
     uuid: string
     displayName: string
     description: string

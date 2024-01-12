@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
 import { agentsByIdService } from "../services/agentsByIdService";
-import { Agents } from "../entities/Agents";
+import { Agent } from "../entities/Agents";
 
 
 
 export function useAgentsById(agentsId: string) {
-    const {data,isFetching,refetch} = useQuery<Agents | null>({
+    const {data,isFetching,refetch} = useQuery<Agent | null>({
         queryKey: ['AgentsById'],
         queryFn: () => agentsByIdService.getById(agentsId),
          staleTime: Infinity,

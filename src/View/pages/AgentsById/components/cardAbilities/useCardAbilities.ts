@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { Ability, Agents } from "../../../../../App/entities/Agents";
+import { Ability, Agent } from "../../../../../App/entities/Agents";
 import { agentsAbilities } from "../../../../../mocks/urlAbilitysValorant";
 
 
 
 
-export function useCardAbilities(agentsById: Agents) {
+export function useCardAbilities(agentsById: Agent) {
 const [abilityActive, setAbilityActive] = useState((agentsById as { abilities: Ability[] }).abilities[0]);
   const [indexAbilityActive, setIndexAbilityActive] = useState(0);
   const [urlAbilityVideo,setAbilityUrlVideo] = useState('')
