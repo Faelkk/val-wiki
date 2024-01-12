@@ -8,5 +8,5 @@ export function useSprays() {
          staleTime: Infinity,
     })
 
-    return {Buddies: data ?? [], isLoading: isFetching}
+    return {Sprays: data ?? [], isLoading: isFetching}
 }

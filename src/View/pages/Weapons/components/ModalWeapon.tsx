@@ -1,4 +1,4 @@
-import React from "react";
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import { Weapon } from "../../../../App/entities/Weapon";
 import Modal from "../../../Components/Modal/Modal";
 
@@ -26,10 +26,18 @@ const ModalWeapon = ({
       open={isModalMenuOpen}
       onClose={onCloseModalMenu}
     >
-      <section>
-        <figure className="flex items-center justify-center">
+      <section className="">
+        <figure className="flex items-center justify-center relative">
+          <div className="">
+            <button className="absolute left-0 top-0">
+              <ArrowLeftIcon className="w-8 h-8" />
+            </button>
+            <button className="absolute right-0 top-0">
+              <ArrowRightIcon className="w-8 h-8" />
+            </button>
+          </div>
           <img
-            className="lowScreen:w-[200px] md:w-[300px] lg:h-[120px] lg:w-[500px] object-contain"
+            className="lowScreen:w-[200px] small:w-[250px] md:w-[300px] small:h-[80px] md:h-[120px] lg:w-[400px] object-contain"
             src={activeWeaponModal?.displayIcon}
             alt={activeWeaponModal?.displayName}
           />

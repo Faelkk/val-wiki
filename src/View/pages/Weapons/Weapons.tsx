@@ -22,9 +22,8 @@ const Weapons = () => {
     return (
       <>
         <Container>
-          <div className="flex justify-between items-center">
-            <h2 className="text-[1.8rem] text-fuscous-gray-100 p-4">Armas</h2>
-          </div>
+          <h2 className="text-[1.8rem] text-fuscous-gray-100 p-4">Armas</h2>
+
           <section>
             <section className="grid  grid-cols-1 lg:grid-cols-2 gap-4 rounded-md">
               {Weapons?.map((weapon: Weapon) => (
