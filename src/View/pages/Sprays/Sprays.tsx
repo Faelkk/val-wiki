@@ -2,11 +2,12 @@ import { ArrowDownIcon, ArrowUpIcon } from "@radix-ui/react-icons";
 import Container from "../../Components/Container";
 import IconScrollClick from "../../Components/IconScrollClick";
 import Loading from "../../Components/Loading";
-import InputHeader from "./components/InputHeader";
+
 import SprayCards from "./components/SprayCards";
 import { useSpraysController } from "./useSpraysController";
 import scrollToBottom from "../../../App/utils/scrollToBottom";
 import { scrollToTop } from "../../../App/utils/scrollToTop";
+import InputHeader from "../../Components/inputHeader";
 
 const Sprays = () => {
   const {
@@ -27,8 +28,9 @@ const Sprays = () => {
           <header className="flex flex-col lg:flex-row justify-between items-center m-8 ">
             <h2 className="text-[1.8rem] text-fuscous-gray-100 p-4">Sprays</h2>
             <InputHeader
-              searchSpray={searchSpray}
-              handleChangeSearchSpray={handleChangeSearchSpray}
+              handleChangeSearchValue={handleChangeSearchSpray}
+              placeholder="Pesquise por algum spray..."
+              searchInputValue={searchSpray}
             />
           </header>
 
