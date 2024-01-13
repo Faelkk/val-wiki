@@ -1,20 +1,25 @@
 import { Weapon } from "../../../App/entities/Weapon";
-import { useWeapons } from "../../../App/hooks/useWeapon";
 
 import Container from "../../Components/Container";
 import Loading from "../../Components/Loading";
 import ModalWeapon from "./components/ModalWeapon";
 import WeaponsCard from "./components/WeaponsCard";
-import { useModalWeaponController } from "./components/useModalWeapon";
+
+import { useWeaponController } from "./useWeaponController";
 
 const Weapons = () => {
-  const { Weapons, isLoading } = useWeapons();
   const {
+    Weapons,
+    isLoading,
+    navigationWasClicked,
+    activeWeaponSkin,
     isModalWeaponOpen,
     activeWeaponModal,
     handleCloseModalWeapon,
     handleOpenModalWeapon,
-  } = useModalWeaponController();
+    handleNextSkin,
+    handlePrevSkin,
+  } = useWeaponController();
 
   if (isLoading) return <Loading isLoading={isLoading} />;
 
@@ -42,6 +47,10 @@ const Weapons = () => {
             onCloseModalMenu={handleCloseModalWeapon}
             isModalMenuOpen={isModalWeaponOpen}
             activeWeaponModal={activeWeaponModal}
+            handleNextSkin={handleNextSkin}
+            handlePrevSkin={handlePrevSkin}
+            activeWeaponSkin={activeWeaponSkin}
+            navigationWasClicked={navigationWasClicked}
           />
         )}
       </>

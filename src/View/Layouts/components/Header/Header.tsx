@@ -48,7 +48,7 @@ const Header = () => {
                 </li>
                 <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
                   {" "}
-                  <Link to="/Buddies">Chaveiro</Link>
+                  <Link to="/Buddies">Chaveiros</Link>
                 </li>
 
                 <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
