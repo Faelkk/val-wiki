@@ -6,5 +6,6 @@ export interface SpraysFetch {
   export interface Spray {
  displayName: string
  displayIcon: string
+ uuid: string
   }
   
