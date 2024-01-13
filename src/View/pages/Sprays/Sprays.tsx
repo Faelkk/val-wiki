@@ -1,13 +1,18 @@
 import Container from "../../Components/Container";
-
 import Loading from "../../Components/Loading";
 import InputHeader from "./components/InputHeader";
 import SprayCards from "./components/SprayCards";
 import { useSpraysController } from "./useSpraysController";
 
 const Sprays = () => {
-  const { searchSpray, spraysFiltered, isLoading, handleChangeSearchSpray } =
-    useSpraysController();
+  const {
+    visibleItems,
+    searchSpray,
+    spraysFiltered,
+    isLoading,
+    handleShowMore,
+    handleChangeSearchSpray,
+  } = useSpraysController();
 
   if (isLoading) return <Loading isLoading={isLoading} />;
 
@@ -23,10 +28,21 @@ const Sprays = () => {
         </header>
 
         <div className="grid grid-cols-1 pp:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md place-items-center">
-          {spraysFiltered.map((spray) => {
+          {spraysFiltered.slice(0, visibleItems).map((spray) => {
             return <SprayCards spray={spray} />;
           })}
         </div>
+
+        {visibleItems < spraysFiltered.length && (
+          <div className="flex justify-center">
+            <button
+              onClick={handleShowMore}
+              className="mt-12  w-[50%] pp:w-[30%] bg-white lg:w-[15%] h-[52px] rounded-md"
+            >
+              Mostrar mais
+            </button>
+          </div>
+        )}
       </Container>
     );
 };
