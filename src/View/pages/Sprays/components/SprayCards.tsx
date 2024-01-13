@@ -13,7 +13,7 @@ const SprayCards = ({ spray }: SprayCardsProps) => {
       <img
         alt={spray.displayName}
         src={spray.displayIcon}
-        className="w-[200px]  object-scale-down mt-4"
+        className="w-[200px] h-[200px] object-scale-down mt-4"
       />
     </div>
   );
