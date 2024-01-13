@@ -1,13 +1,14 @@
 import { ArrowDownIcon, ArrowUpIcon } from "@radix-ui/react-icons";
 import Container from "../../Components/Container";
-import IconScrollClick from "../../Components/IconScrollClick";
 import Loading from "../../Components/Loading";
 
 import SprayCards from "./components/SprayCards";
 import { useSpraysController } from "./useSpraysController";
-import scrollToBottom from "../../../App/utils/scrollToBottom";
-import { scrollToTop } from "../../../App/utils/scrollToTop";
 import InputHeader from "../../Components/inputHeader";
+
+import scrollToBottom from "../../../App/utils/scrollToBottom";
+import scrollToTop from "../../../App/utils/scrollToTop";
+import IconScrollClick from "../../Components/IconScrollClick";
 
 const Sprays = () => {
   const {
