@@ -8,7 +8,7 @@ export function useModalWeaponController() {
   );
   const [navigationWasClicked, setNavigationWasClicked] = useState(false);
   const [selectedSkinIndex, setSelectedSkinIndex] = useState(0);
-  const [activeWeaponSkin, setActiveWeaponSkin] = useState<skins>();
+  const [activeWeaponSkin, setActiveWeaponSkin] = useState<skins | null>(null);
 
   const handleOpenModalWeapon = (weapon: Weapon) => {
     setIsModalWeaponOpen(true);
@@ -19,6 +19,10 @@ export function useModalWeaponController() {
   const handleCloseModalWeapon = () => {
     setIsModalWeaponOpen(false);
     setActiveWeaponModal(null);
+    setNavigationWasClicked(false);
+    setActiveWeaponModal(null);
+    setActiveWeaponSkin(null);
+    setSelectedSkinIndex(0);
   };
 
   const handlePrevSkin = (weapon: Weapon) => {

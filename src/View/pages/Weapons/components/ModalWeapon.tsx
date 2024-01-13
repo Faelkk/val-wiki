@@ -6,7 +6,7 @@ interface ModalWeaponsProps {
   isModalMenuOpen: boolean;
   navigationWasClicked: boolean;
   activeWeaponModal: Weapon | null;
-  activeWeaponSkin: skins | undefined;
+  activeWeaponSkin: skins | null;
   handlePrevSkin: (activeWeaponModal: Weapon) => void;
   handleNextSkin: (activeWeaponModal: Weapon) => void;
   onCloseModalMenu: () => void;
@@ -22,8 +22,6 @@ const ModalWeapon = ({
   handleNextSkin,
 }: ModalWeaponsProps) => {
   if (activeWeaponModal) {
-    console.log(activeWeaponSkin);
-
     const activeWeaponImg = navigationWasClicked
       ? activeWeaponSkin?.displayIcon
       : activeWeaponModal?.displayIcon;
