@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
-
 import useWindowWidth from "../../../../App/hooks/useWindowWidth";
 
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import TitleHeader from "./components/TitleHeader";
 import ModalHeader from "./components/ModalHeader";
 import { useModalMenu } from "../../../Components/Modal/useModal";
+import LinksNavigation from "../../../Components/LinksNavigation";
 
 const Header = () => {
   const width = useWindowWidth();
@@ -25,7 +24,7 @@ const Header = () => {
           </div>
 
           {width <= 768 ? (
-            <button className="text-fuscous-gray-50 p-4">
+            <button className="text-fuscous-gray-50 p-4 ">
               <HamburgerMenuIcon
                 aria-label="BtnOpenModal"
                 onClick={handleOpenModalMenu}
@@ -34,32 +33,10 @@ const Header = () => {
             </button>
           ) : (
             <nav className="flex ">
-              <ul className="flex items-center justify-center gap-6 ">
-                <li className="text-fuscous-gray-400  hover:text-fuscous-gray-50 transition-colors">
-                  <Link to="/agents">Agentes</Link>
-                </li>
-                <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
-                  <Link to="/weapons">Arsenal</Link>
-                </li>
-
-                <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
-                  {" "}
-                  <Link to="/cards">Cards</Link>
-                </li>
-                <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
-                  {" "}
-                  <Link to="/Buddies">Chaveiros</Link>
-                </li>
-
-                <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
-                  {" "}
-                  <Link to="/maps">Mapas</Link>
-                </li>
-
-                <li className="text-fuscous-gray-400 hover:text-fuscous-gray-50 transition-colors">
-                  <Link to="/sprays">Sprays</Link>
-                </li>
-              </ul>
+              <LinksNavigation
+                classNameUL="flex items-center justify-center gap-6 "
+                classNameLI="text-fuscous-gray-400  hover:text-fuscous-gray-50 transition-colors"
+              />
             </nav>
           )}
         </section>
