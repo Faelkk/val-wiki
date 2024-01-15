@@ -26,21 +26,20 @@ export function useModalWeaponController() {
   };
 
   const handlePrevSkin = (weapon: Weapon) => {
-    if (activeWeaponModal && navigationWasClicked)
-      setSelectedSkinIndex((prevIndex) =>
-        prevIndex === 0 ? activeWeaponModal?.skins.length - 1 : prevIndex - 1
-      );
+    setSelectedSkinIndex((prevIndex) =>
+      prevIndex === 0 ? activeWeaponModal!.skins.length - 1 : prevIndex - 1
+    );
     setActiveWeaponSkin(weapon.skins[selectedSkinIndex]);
     setNavigationWasClicked(true);
   };
 
   const handleNextSkin = (weapon: Weapon) => {
-    if (activeWeaponModal && navigationWasClicked)
-      setSelectedSkinIndex((prevIndex) =>
-        prevIndex === activeWeaponModal?.skins.length - 1 ? 0 : prevIndex + 1
-      );
-    setActiveWeaponSkin(weapon.skins[selectedSkinIndex]);
     setNavigationWasClicked(true);
+
+    setSelectedSkinIndex((prevIndex) =>
+      prevIndex === activeWeaponModal!.skins.length - 1 ? 0 : prevIndex + 1
+    );
+    setActiveWeaponSkin(weapon.skins[selectedSkinIndex]);
   };
 
   return {

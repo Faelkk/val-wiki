@@ -25,7 +25,7 @@ const PlayerCards = () => {
       <>
         <Container>
           <header className="flex flex-col lg:flex-row justify-between items-center m-8 ">
-            <h2 className="text-[1.8rem] text-fuscous-gray-100 p-4">Sprays</h2>
+            <h2 className="text-[1.8rem] text-fuscous-gray-100 p-4">Cards</h2>
             <InputHeader
               handleChangeSearchValue={handleChangeSearchPlayerCards}
               placeholder="Pesquise por algum spray..."

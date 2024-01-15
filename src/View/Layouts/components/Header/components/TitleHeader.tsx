@@ -17,7 +17,7 @@ const TitleHeader = ({
     <Link to="/" className="flex justify-center items-center gap-2">
       {" "}
       <ValorantLogo currentColor={currentColor!} className={classNameImg!} />
-      <h1 className={cn(" font-bold", classNameH1)}>Val Wiki</h1>
+      <h1 className={cn(" font-bold uppercase", classNameH1)}>Val Wiki</h1>
     </Link>
   );
 };

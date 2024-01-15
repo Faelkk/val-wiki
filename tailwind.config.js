@@ -7,8 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        agent: "url('https://trackercdn.com/cdn/tracker.gg/valorant/images/agents-bg.png')",
-        home: "url('https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt781978fa16eeae9f/65972c1f2d2612d28ae75d70/Ep8a1_Defiance_Playval.com_Act_Overview_banner_3440x1020_Darkbg.jpg')"
+        agent: "url('https://trackercdn.com/cdn/tracker.gg/valorant/images/agents-bg.png')",    
       },
       
       screens: {
