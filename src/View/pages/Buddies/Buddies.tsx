@@ -14,15 +14,12 @@ const Buddies = () => {
     isLoading,
     searchBuddies,
     visibleItems,
-    Buddies,
     buddiesFiltered,
     handleChangeSearchBuddies,
     handleShowMore,
   } = useBuddiesController();
 
   if (isLoading) return <Loading isLoading={isLoading} />;
-
-  console.log(Buddies);
 
   return (
     <>

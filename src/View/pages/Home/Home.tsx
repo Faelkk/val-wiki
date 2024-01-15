@@ -22,7 +22,7 @@ const Home = () => {
         <button className="border border-fuscous-gray-900 p-2 mt-8 hover:scale-105 transition-transform">
           <Link
             to="https://www.youtube.com/watch?v=e_E9W2vsRbQ"
-            className="bg-redVariation2-450 w-[250px] h-[52px] flex items-center justify-center text-fuscous-gray-50  font-bold uppercase "
+            className="bg-redVariation2-450 w-[250px] h-[52px] flex items-center justify-center text-fuscous-gray-980  font-bold uppercase "
             target="_blank"
           >
             Assista o trailer

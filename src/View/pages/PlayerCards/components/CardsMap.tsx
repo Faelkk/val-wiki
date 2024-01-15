@@ -5,8 +5,6 @@ interface CardsMapProps {
 }
 
 const CardsMap = ({ PlayerCard }: CardsMapProps) => {
-  console.log(PlayerCard);
-
   return (
     <div className="flex w-[300px] flex-col items-center p-3 rounded-md bg-blueVariation-920">
       <h2 className=" text-fuscous-gray-100 font-bold text-center">
