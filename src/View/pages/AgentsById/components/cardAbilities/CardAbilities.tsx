@@ -34,7 +34,7 @@ const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {
               if (abilities.displayIcon !== null)
                 return (
                   <button
-                    className="border-[1px]  p-2 rounded-sm"
+                    className="border-[1px]  p-2 rounded-sm hover:scale-105 transition-transform"
                     onClick={() => handleClick(abilities, index)}
                     key={abilities.displayName}
                   >

@@ -9,7 +9,7 @@ const CardGeneralInfo = ({ agentsById }: CardGeneralInfoProps) => {
   return (
     <>
       <section className="flex flex-col  lg:w-[50%]">
-        <figure className="flex justify-center items-center bg-blueVariation2-950 rounded-sm relative">
+        <figure className="flex justify-center items-center bg-blueVariation2-950 rounded-sm relative border border-fuscous-gray-100">
           <img
             src={agentsById.fullPortraitV2}
             alt={agentsById.displayName}
