@@ -9,6 +9,7 @@ import InputHeader from "../../Components/inputHeader";
 import scrollToBottom from "../../../App/utils/scrollToBottom";
 import scrollToTop from "../../../App/utils/scrollToTop";
 import IconScrollClick from "../../Components/IconScrollClick";
+import NoFilteredContentFound from "../../Components/NoFilteredContentFound";
 
 const Sprays = () => {
   const {
@@ -22,7 +23,9 @@ const Sprays = () => {
 
   if (isLoading) return <Loading isLoading={isLoading} />;
 
-  if (spraysFiltered)
+  // ... (seu código anterior)
+
+  if (spraysFiltered) {
     return (
       <>
         <Container>
@@ -35,17 +38,21 @@ const Sprays = () => {
             />
           </header>
 
-          <div className="grid grid-cols-1 pp:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md place-items-center">
-            {spraysFiltered.slice(0, visibleItems).map((spray) => {
-              return <SprayCards spray={spray} key={spray.uuid} />;
-            })}
-          </div>
+          {spraysFiltered.length > 0 ? (
+            <div className="grid grid-cols-1 pp:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md place-items-center">
+              {spraysFiltered.slice(0, visibleItems).map((spray) => {
+                return <SprayCards spray={spray} key={spray.uuid} />;
+              })}
+            </div>
+          ) : (
+            <NoFilteredContentFound inputValue={searchSpray} />
+          )}
 
           {visibleItems < spraysFiltered.length && (
             <div className="flex justify-center">
               <button
                 onClick={handleShowMore}
-                className="mt-12  w-[50%] pp:w-[30%] bg-white lg:w-[15%] h-[52px] rounded-md"
+                className="mt-12 w-[50%] pp:w-[30%] bg-white lg:w-[15%] h-[52px] rounded-md"
               >
                 Mostrar mais
               </button>
@@ -64,6 +71,7 @@ const Sprays = () => {
         </div>
       </>
     );
+  }
 };
 
 export default Sprays;

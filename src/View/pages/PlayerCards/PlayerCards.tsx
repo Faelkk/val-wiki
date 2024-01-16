@@ -7,6 +7,7 @@ import Loading from "../../Components/Loading";
 import InputHeader from "../../Components/inputHeader";
 import CardsMap from "./components/CardsMap";
 import { usePlayerCardController } from "./usePlayerCardController";
+import NoFilteredContentFound from "../../Components/NoFilteredContentFound";
 
 const PlayerCards = () => {
   const {
@@ -20,7 +21,7 @@ const PlayerCards = () => {
 
   if (isLoading) return <Loading isLoading={isLoading} />;
 
-  if (PlayerCardsFiltered)
+  if (PlayerCardsFiltered) {
     return (
       <>
         <Container>
@@ -33,17 +34,23 @@ const PlayerCards = () => {
             />
           </header>
 
-          <div className="grid grid-cols-1 pp:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md place-items-center">
-            {PlayerCardsFiltered.slice(0, visibleItems).map((playerCard) => {
-              return <CardsMap PlayerCard={playerCard} key={playerCard.uuid} />;
-            })}
-          </div>
+          {PlayerCardsFiltered.length > 0 ? (
+            <div className="grid grid-cols-1 pp:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md place-items-center">
+              {PlayerCardsFiltered.slice(0, visibleItems).map((playerCard) => {
+                return (
+                  <CardsMap PlayerCard={playerCard} key={playerCard.uuid} />
+                );
+              })}
+            </div>
+          ) : (
+            <NoFilteredContentFound inputValue={searchPlayerCards} />
+          )}
 
           {visibleItems < PlayerCardsFiltered.length && (
             <div className="flex justify-center">
               <button
                 onClick={handleShowMore}
-                className="mt-12  w-[50%] pp:w-[30%] bg-white lg:w-[15%] h-[52px] rounded-md"
+                className="mt-12 w-[50%] pp:w-[30%] bg-white lg:w-[15%] h-[52px] rounded-md"
               >
                 Mostrar mais
               </button>
@@ -62,6 +69,7 @@ const PlayerCards = () => {
         </div>
       </>
     );
+  }
 };
 
 export default PlayerCards;

@@ -8,6 +8,7 @@ import BuddiesCards from "./components/BuddiesCards";
 import { useBuddiesController } from "./useBuddiesController";
 import scrollToBottom from "../../../App/utils/scrollToBottom";
 import scrollToTop from "../../../App/utils/scrollToTop";
+import NoFilteredContentFound from "../../Components/NoFilteredContentFound";
 
 const Buddies = () => {
   const {
@@ -33,24 +34,28 @@ const Buddies = () => {
           />
         </header>
 
-        <main>
-          <div className="grid grid-cols-1 pp:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md place-items-center">
-            {buddiesFiltered.slice(0, visibleItems).map((buddies) => {
-              return <BuddiesCards buddies={buddies} key={buddies.uuid} />;
-            })}
-          </div>
-
-          {visibleItems < buddiesFiltered.length && (
-            <div className="flex justify-center">
-              <button
-                onClick={handleShowMore}
-                className="mt-12  w-[50%] pp:w-[30%] bg-white lg:w-[15%] h-[52px] rounded-md"
-              >
-                Mostrar mais
-              </button>
+        {buddiesFiltered.length > 0 ? (
+          <main>
+            <div className="grid grid-cols-1 pp:grid-cols-2 lg:grid-cols-3 gap-4 rounded-md place-items-center">
+              {buddiesFiltered.slice(0, visibleItems).map((buddies) => {
+                return <BuddiesCards buddies={buddies} key={buddies.uuid} />;
+              })}
             </div>
-          )}
-        </main>
+
+            {visibleItems < buddiesFiltered.length && (
+              <div className="flex justify-center">
+                <button
+                  onClick={handleShowMore}
+                  className="mt-12  w-[50%] pp:w-[30%] bg-white lg:w-[15%] h-[52px] rounded-md"
+                >
+                  Mostrar mais
+                </button>
+              </div>
+            )}
+          </main>
+        ) : (
+          <NoFilteredContentFound inputValue={searchBuddies} />
+        )}
       </Container>
       <div className="fixed bottom-0 right-0">
         <IconScrollClick onClick={scrollToBottom}>
