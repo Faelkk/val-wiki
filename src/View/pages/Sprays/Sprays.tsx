@@ -23,8 +23,6 @@ const Sprays = () => {
 
   if (isLoading) return <Loading isLoading={isLoading} />;
 
-  // ... (seu código anterior)
-
   if (spraysFiltered) {
     return (
       <>
