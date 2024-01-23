@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
 import TitleValorant from "../../../assets/titleValorant";
 import bgVideoUrl from "../../../assets/videos/254cf66c-7f37-465a-9333-d53465138840.mp4";
+import { useHomeController } from "./useHomeController";
 
 const Home = () => {
+  const { homeData } = useHomeController();
+
+  console.log(homeData);
+
   return (
     <main className="relative h-full flex items-center justify-center">
       <video
