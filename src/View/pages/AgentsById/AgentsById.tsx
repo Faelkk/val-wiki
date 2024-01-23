@@ -19,7 +19,7 @@ const AgentsById = () => {
     return (
       <>
         {agentsByIdTyped && (
-          <section className="my-4">
+          <section className="h-full">
             <HeaderAgents agentsById={agentsByIdTyped} agents={agents} />
             <CardAgentById agentsById={agentsByIdTyped} />
           </section>

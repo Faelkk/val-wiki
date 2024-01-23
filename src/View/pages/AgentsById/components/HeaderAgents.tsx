@@ -10,7 +10,7 @@ interface HeaderAgentsProps {
 
 const HeaderAgents = ({ agentsById, agents }: HeaderAgentsProps) => {
   return (
-    <header className="w-full flex justify-center">
+    <header className="w-full flex justify-center ">
       <nav className="flex flex-col relative   md:flex-row items-center justify-between w-[90%]">
         <div className="absolute top-0 left-0 md:static">
           <Link to="/agents" className="flex gap-3">

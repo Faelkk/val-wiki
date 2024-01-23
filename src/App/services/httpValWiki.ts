@@ -3,6 +3,7 @@ import { sleep } from "../utils/sleep";
 
 export const httpClientValWiki = axios.create({
   baseURL: import.meta.env.VITE_VALORANT_API_VAL_WIKI,
+  withCredentials: false,
 });
 
 httpClientValWiki.interceptors.request.use(async (config) => {

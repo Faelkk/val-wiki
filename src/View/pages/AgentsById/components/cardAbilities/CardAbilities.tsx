@@ -25,7 +25,7 @@ const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {
           />
         </div>
 
-        <div className="mt-4 flex-1 bg-[#14191f] p-2 small:p-6 flex flex-col gap-4 ">
+        <div className=" flex-1 bg-[#14191f] p-2 small:p-6 flex flex-col gap-4 ">
           <span className="text-fuscous-gray-300 font-bold uppercase ">
             Habilidades
           </span>
@@ -48,7 +48,7 @@ const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {
             })}
           </div>
           <div className="flex flex-col ">
-            <span className="text-fuscous-gray-50 text-[1.3rem] uppercase tracking-[.07rem] font-bold mb-2">
+            <span className="text-fuscous-gray-50 text-[1.2rem]  font-bold mb-2">
               {abilityActive?.displayName}
             </span>
             <span className="text-fuscous-gray-50 text-[.9rem] ">
