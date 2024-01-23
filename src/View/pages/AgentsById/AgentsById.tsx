@@ -1,7 +1,7 @@
 import { Navigate } from "react-router-dom";
 import { useAgentsByIdController } from "./useAgentsController";
 import HeaderAgents from "./components/HeaderAgents";
-import CardAgentById from "./components/CardAgentById";
+import CardAgentById from "./components/cardAgentById/CardAgentById";
 import { Agent } from "../../../App/entities/Agents";
 import { useAgents } from "../../../App/hooks/useAgents";
 import Loading from "../../Components/Loading";

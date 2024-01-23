@@ -1,4 +1,5 @@
 import { Agent } from "../../../../../App/entities/Agents";
+import VideoDefaultModal from "../videoDefaultModal/videoDefaultModal";
 import { useCardAbilities } from "./useCardAbilities";
 
 interface CardAbilitiesProps {
@@ -13,14 +14,8 @@ const CardAbilities = ({ agentsById }: CardAbilitiesProps) => {
     return (
       <section className="flex flex-col  rounded-sm  lg:w-[50%]">
         <div className="w-full">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            disablePictureInPicture
-            controlsList="nodownload"
-            className="w-full object-cover h-[400px]"
+          <VideoDefaultModal
+            className="w-full object-cover h-[400px] "
             src={urlAbilityVideo}
           />
         </div>

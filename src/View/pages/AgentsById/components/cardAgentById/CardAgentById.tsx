@@ -1,7 +1,7 @@
-import { Agent } from "../../../../App/entities/Agents";
+import { Agent } from "../../../../../App/entities/Agents";
 
-import CardGeneralInfo from "./CardGeneralInfo";
-import CardAbilities from "./cardAbilities/CardAbilities";
+import CardGeneralInfo from "../cardGeneralInfo/CardGeneralInfo";
+import CardAbilities from "../cardAbilities/CardAbilities";
 
 interface CardAgentByIdProps {
   agentsById: Agent;
