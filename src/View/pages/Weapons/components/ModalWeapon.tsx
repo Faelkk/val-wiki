@@ -34,7 +34,7 @@ const ModalWeapon = ({
       <Modal
         classNameContent="lowScreen:w-[300px] small:w-[400px] md:w-[600px] lg:w-[800px]"
         title={
-          <span className="text-fuscous-gray-950 text-[1.5rem]">
+          <span className="text-fuscous-gray-950 text-[1.3rem] md:text-[1.5rem]">
             {activeWeaponName}
           </span>
         }
@@ -42,21 +42,25 @@ const ModalWeapon = ({
         onClose={onCloseModalMenu}
       >
         <section className="">
-          <figure className="flex items-center justify-center relative">
-            <div className="">
-              <button
-                className="absolute left-0 top-0"
-                onClick={() => handlePrevSkin(activeWeaponModal)}
-              >
-                <ArrowLeftIcon className="w-8 h-8" />
-              </button>
+          <figure className="flex flex-col-reverse  items-center justify-center relative">
+            <div className="flex justify-between w-full">
+              <div className="h-full md:absolute md:left-0 md:top-0 items-center flex justify-center">
+                <button
+                  className=""
+                  onClick={() => handlePrevSkin(activeWeaponModal)}
+                >
+                  <ArrowLeftIcon className="w-8 h-8" />
+                </button>
+              </div>
 
-              <button
-                className="absolute right-0 top-0"
-                onClick={() => handleNextSkin(activeWeaponModal)}
-              >
-                <ArrowRightIcon className="w-8 h-8" />
-              </button>
+              <div className="h-full  items-center flex justify-center md:absolute md:right-0 md:top-0">
+                <button
+                  className=""
+                  onClick={() => handleNextSkin(activeWeaponModal)}
+                >
+                  <ArrowRightIcon className="w-8 h-8" />
+                </button>
+              </div>
             </div>
 
             {activeWeaponImg ? (
@@ -72,12 +76,24 @@ const ModalWeapon = ({
 
           <div className="flex flex-col small:flex-row justify-between mt-8">
             <div className="font-semibold text-fuscous-gray-600">
-              <span className="">Categoria:</span>{" "}
-              <span>{activeWeaponModal?.shopData.categoryText}</span>
+              {activeWeaponModal?.shopData?.categoryText ? (
+                <>
+                  <span className="">Categoria:</span>{" "}
+                  <span>{activeWeaponModal?.shopData?.categoryText}</span>
+                </>
+              ) : (
+                ""
+              )}
             </div>
             <div className="font-semibold text-fuscous-gray-600">
-              <span>Custo:</span>{" "}
-              <span>{activeWeaponModal?.shopData.cost}$</span>
+              {activeWeaponModal?.shopData?.cost ? (
+                <>
+                  <span>Custo:</span>{" "}
+                  <span>{activeWeaponModal?.shopData?.cost}$</span>
+                </>
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </section>
